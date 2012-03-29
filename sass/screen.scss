@@ -1,0 +1,86 @@
+// Optional
+body {
+	background: #666;
+	margin: 0;
+	padding: 0;
+}
+
+// Makes images responsive
+img {
+	max-width: 100%;
+}
+
+// The containing element the grid will fill
+#box {
+	background: #FFF;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 2em;
+	margin: 3em auto;
+	width: 80%;
+}
+
+// The mixin calculations
+@mixin grid($items) {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	li {
+		float: left;
+		
+		// Sets margin and width when your grid only contains 1 image
+		&:nth-child(1n) {
+			margin: 5% 0 0 0;
+		}
+		width: 100%;
+		
+		// If you include more than one image in a grid, calculate dimensions and add margin
+		@if $items > 1 {
+		
+			// Selecting all children so a media query adjustment resets all breaking photos
+			&:nth-child(1n) {
+				margin: (5% / ($items - 1)) (5% / ($items - 1)) 0 0;
+			}
+			
+			width: (95% / $items);
+		}
+		
+		// Removes margin from the last image in a row
+		&:nth-child(#{$items}n) {
+			margin-right: 0;
+		}
+		
+		// Removes margin from first row of images
+		&:nth-child(-n+#{$items}) {
+			margin-top: 0;
+		}
+		img, a {
+			float: left;
+		}
+		
+		// Used if your photos have titles or captions
+		a {
+			text-align: center;
+		}
+	}
+}
+
+// Include 4 images per row
+ul {
+	@include grid(4);
+}
+
+// Break to 3 images per row when viewing on a tablet
+@media (max-width: 768px) {
+	ul {
+		@include grid(3);
+	}
+}
+
+// Break to 1 image per row when on mobile
+@media (max-width: 480px) {
+	ul {
+		@include grid(1);
+	}
+}
