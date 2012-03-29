@@ -20,7 +20,9 @@
 
 <p>In your scss or sass document, add the grid mixin and specify how many images should be in each row. For example:</p>
 <pre>
-	@include grid(4);
+	ul {
+		@include grid(4);
+	}
 </pre>
 
 <p>Done.</p>
