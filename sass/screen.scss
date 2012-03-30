@@ -10,14 +10,28 @@ img {
 	max-width: 100%;
 }
 
+pre {
+	color: #DFDFDF;
+	display: none;
+	font-size: 2em;
+	margin: 2em 0;
+	padding: 0;
+	text-align: center;
+	text-shadow: 0 1px 2px #333;
+}
+
+#desktop {
+	display: block;
+}
+
 // The containing element the grid will fill
 #box {
 	background: #FFF;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 2em;
-	margin: 3em auto;
-	width: 80%;
+	padding: 1em;
+	margin: 0 auto;
+	width: 90%;
 }
 
 // The mixin calculations
@@ -66,21 +80,21 @@ img {
 	}
 }
 
-// Include 4 images per row
+// Include 5 images per row
 ul {
-	@include grid(4);
+	@include grid(5);
 }
 
-// Break to 3 images per row when viewing on a tablet
-@media (max-width: 768px) {
+// Break to 3 image per row when on mobile
+@media (max-width: 480px) {
 	ul {
 		@include grid(3);
 	}
-}
-
-// Break to 1 image per row when on mobile
-@media (max-width: 480px) {
-	ul {
-		@include grid(1);
+	#desktop {
+		display: none;
+	}
+	#mobile {
+		display: block;
+		font-size: 1.5em;
 	}
 }

@@ -3,9 +3,16 @@
 <head>
 	<title>Adaptable</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="stylesheets/screen.css" rel="stylesheet" />
 </head>
 <body>
+	<pre id="desktop">
+ul { @include grid(5); }
+	</pre>
+	<pre id="mobile">
+ul { @include grid(3); }
+	</pre>
 	<div id="box">
 		<ul>
 			<li><a href="#"><img src="images/beaker.jpg" /></a></li>
