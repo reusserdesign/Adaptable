@@ -2,7 +2,7 @@
 <p>Creating a responsive photo gallery is tough. You need to calculate again and again and again. You're a web designer/developer and (face it) math is not your specialty. This Sass mixin allows you to add a simple bit of code in your stylesheet to dynamically calculate widths and margins for your photos.</p>
 
 <h2>Demo</h2>
-</p>Because every thing needs to be demonstrated. <a href="http://www.reusserdesign.com/blog/demo/adaptable/index.html">View the demo</a></p>
+</p>Because every thing needs to be demonstrated. <a href="http://www.reusserdesign.com/blog/demo/adaptable/index.html" target="_blank">View the demo</a></p>
 
 <h2>How To Use</h2>
 <p>In your HTML, create a gallery using an unordered list. For example:</p>
