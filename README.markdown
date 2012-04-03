@@ -92,7 +92,7 @@
 
 <h2>Latest Changes</h2>
 
-<h3>1.0.1 - Aprile 2, 2012</h3>
+<h3>1.0.1 - April 2, 2012</h3>
 <ul>
 	<li>Fixed a numerous amount of browser issues</li>
 	<li>Enhanced documentation</li>
