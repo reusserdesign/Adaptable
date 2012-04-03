@@ -5,6 +5,11 @@ body {
 	padding: 0;
 }
 
+// Minimal reset
+a img {
+	border: none;
+}
+
 // Makes images responsive
 img {
 	max-width: 100%;
