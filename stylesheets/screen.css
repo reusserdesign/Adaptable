@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+a img {
+  border: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -39,8 +43,8 @@ ul {
 }
 ul li {
   float: left;
-  width: 100%;
   width: 19%;
+  *width: 18.8%;
 }
 ul li:nth-child(1n) {
   margin: 5% 0 0 0;
@@ -59,6 +63,7 @@ ul li img, ul li a {
 }
 ul li a {
   text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -70,8 +75,8 @@ ul li a {
   }
   ul li {
     float: left;
-    width: 100%;
     width: 31.667%;
+    *width: 31.333%;
   }
   ul li:nth-child(1n) {
     margin: 5% 0 0 0;
@@ -90,6 +95,7 @@ ul li a {
   }
   ul li a {
     text-align: center;
+    width: 100%;
   }
 
   #desktop {

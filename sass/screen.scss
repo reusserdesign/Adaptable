@@ -52,7 +52,6 @@ pre {
 		&:nth-child(1n) {
 			margin: 5% 0 0 0;
 		}
-		width: 100%;
 		
 		// If you include more than one image in a grid, calculate dimensions and add margin
 		@if $items > 1 {
@@ -63,6 +62,8 @@ pre {
 			}
 			
 			width: (95% / $items);
+			// Ugh, we know. The IE hack is nasty, but it was the easiest fix to implement for users and maintain simplicity. IE7 is bad (imagine that) about calculating percentages so we knocked it down a full percent to keep photos from wrapping. When IE7 falls off the face of the earth consider line 66 to follow suit.
+			*width: (94% / $items);
 		}
 		
 		// Removes margin from the last image in a row
